@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ajouter un employé</title>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body>
+        <div class="ambient"></div>
+        <main class="content">
+            <section class="card">
+                <h2>Ajouter un employé</h2>
+                <form id="employee-form" class="form-grid">
+                    <input type="text" name="name" placeholder="Nom complet" required />
+                    <input type="email" name="email" placeholder="Email" required />
+                    <input type="text" name="department" placeholder="Département" />
+                    <input type="text" name="title" placeholder="Poste" />
+                    <button type="submit">Enregistrer l'employé</button>
+                    <a class="button" href="/">Annuler</a>
+                </form>
+            </section>
+        </main>
+        <script src="/views/employee.js"></script>
+    </body>
+</html>

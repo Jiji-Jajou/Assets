@@ -1,0 +1,206 @@
+:root {
+    --ink: #0d1025;
+    --ink-soft: #303655;
+    --sand: #f6f1ea;
+    --gold: #e0b35d;
+    --teal: #4c9b8a;
+    --card: #ffffff;
+    --shadow: rgba(13, 16, 37, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Trebuchet MS", "Georgia", serif;
+    background: radial-gradient(circle at top, #f8f3ea 0%, #e8efe9 40%, #dbe7f1 100%);
+    color: var(--ink);
+    padding: 2.5rem clamp(1rem, 3vw, 3.5rem) 4rem;
+}
+
+.ambient {
+    position: fixed;
+    inset: 10% 0 auto auto;
+    width: 240px;
+    height: 240px;
+    background: radial-gradient(circle, rgba(224, 179, 93, 0.55), transparent 70%);
+    filter: blur(0px);
+    z-index: -1;
+}
+
+.hero {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.2rem, 3.5vw, 3.6rem);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.22em;
+    color: var(--teal);
+    margin-bottom: 0.6rem;
+}
+
+.subtitle {
+    color: var(--ink-soft);
+    max-width: 32rem;
+}
+
+.hero-panel {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.hero-stat {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 18px 40px var(--shadow);
+    text-align: center;
+}
+
+.hero-stat span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.hero-stat small {
+    color: var(--ink-soft);
+}
+
+.content {
+    display: grid;
+    gap: 1.6rem;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 22px;
+    padding: 1.6rem 1.8rem 2rem;
+    box-shadow: 0 22px 44px var(--shadow);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.8rem;
+    margin-bottom: 1.4rem;
+}
+
+input,
+select,
+button {
+    padding: 0.7rem 0.9rem;
+    border-radius: 12px;
+    border: 1px solid #d7d9e2;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+button {
+    background: var(--ink);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+button,
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 10px 24px rgba(13, 16, 37, 0.18);
+}
+
+button:hover {
+    background: #13173a;
+}
+
+button:focus-visible,
+.button:focus-visible {
+    outline: 2px solid rgba(76, 155, 138, 0.6);
+    outline-offset: 2px;
+}
+
+.button {
+    background: var(--ink);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 0.7rem 0.9rem;
+}
+
+.button:hover {
+    background: #13173a;
+}
+
+.list {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.list-item {
+    border: 1px solid #e4e6ef;
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    background: #fbfbfd;
+}
+
+.list-item span {
+    color: var(--ink-soft);
+}
+
+.badge {
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: rgba(76, 155, 138, 0.15);
+    color: var(--teal);
+}
+
+.actions button {
+    background: var(--gold);
+    color: #1f1607;
+}
+
+.actions button:hover {
+    background: #f0c06a;
+}
+
+@media (max-width: 900px) {
+    .hero-panel {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .hero {
+        align-items: flex-start;
+    }
+}

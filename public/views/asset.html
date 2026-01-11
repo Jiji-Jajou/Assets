@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ajouter un matériel</title>
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body>
+        <div class="ambient"></div>
+        <main class="content">
+            <section class="card">
+                <h2>Ajouter un matériel</h2>
+                <form id="asset-form" class="form-grid">
+                    <input type="text" name="name" placeholder="Nom du matériel" required />
+                    <select name="type" required>
+                        <option value="">Type</option>
+                        <option value="laptop">Ordinateur portable</option>
+                        <option value="desktop">Ordinateur fixe</option>
+                        <option value="phone">Téléphone</option>
+                        <option value="tablet">Tablette</option>
+                        <option value="monitor">Écran</option>
+                        <option value="other">Autre</option>
+                    </select>
+                    <input type="text" name="serialNumber" placeholder="Numéro de série" required />
+                    <input type="text" name="notes" placeholder="Notes" />
+                    <button type="submit">Enregistrer le matériel</button>
+                    <a class="button" href="/">Annuler</a>
+                </form>
+            </section>
+        </main>
+        <script src="/views/asset.js"></script>
+    </body>
+</html>

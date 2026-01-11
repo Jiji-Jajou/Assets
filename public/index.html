@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gestion du parc informatique</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="ambient"></div>
+        <header class="hero">
+            <div class="hero-text">
+                <p class="eyebrow">Service informatique</p>
+                <h1>Gestion du parc informatique</h1>
+            </div>
+            <div class="hero-panel">
+                <div class="hero-stat">
+                    <span id="asset-count">0</span>
+                    <small>Matériels</small>
+                </div>
+                <div class="hero-stat">
+                    <span id="active-count">0</span>
+                    <small>Attributions actives</small>
+                </div>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="card">
+                <h2>Matériels</h2>
+                <div class="form-grid">
+                    <a class="button" href="/views/asset.html">Ajouter un matériel</a>
+                    <a class="button" href="/views/employee.html">Ajouter un employé</a>
+                </div>
+                <div id="assets-list" class="list"></div>
+            </section>
+        </main>
+
+        <script src="app.js"></script>
+    </body>
+</html>
